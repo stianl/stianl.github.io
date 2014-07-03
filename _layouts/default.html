@@ -3,20 +3,34 @@
 <head>
     <title>{{ page.title }}</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="/css/mfglabs_iconset.css">
+    <link rel="stylesheet" href="/css/main.css"/>
+    <meta name="viewport" content="width=device-width">
+
 </head>
 
 <body>
 <div id="top">
-    <h1>{{ page.title }}</h1>
-    developer - geek - father
+    <div id="banner">
+        <h1>{{ page.title }}</h1>
+        {% if page.url == "/index.html" %}
 
-    <ul class="share-buttons">
-        <li><a href="https://twitter.com/Stianl"><img src="images/Twitter.png"></a></li>
-        <li><a href="https://plus.google.com/+StianLindhom"><img src="images/Google+.png"></a></li>
-        <li><a href="http://no.linkedin.com/in/stianb/"><img src="images/LinkedIn.png"></a></li>
-        <li><a href="mailto:stian@lindhom.no"><img src="images/Email.png"></a></li>
-    </ul>
+        developer - geek - father
+
+        <ul class="share-buttons">
+            <li><a href="https://twitter.com/Stianl"><i class="icon-twitter_circle icon2x"></i></a></li>
+            <li><a href="https://plus.google.com/+StianLindhom"><i class="icon-google_plus_circle icon2x"></i></a></li>
+            <li><a href="http://no.linkedin.com/in/stianb/"><i class="icon-linked_in_circle icon2x"></i></a></li>
+            <li><a href="http://www.github.com/stianl"><i class="icon-octopus icon2x"></i></a></li>
+            <li><a href="mailto:stian@lindhom.no"><i class="icon-at icon2x"></i></a></li>
+
+        </ul>
+        {% else %}
+
+        {{ page.date | date: "%B %d, %Y" }}
+
+        {% endif %}
+    </div>
 </div>
 <div id="content">
     {{ content }}

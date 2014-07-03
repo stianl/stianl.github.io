@@ -4,8 +4,13 @@ title: Stian B. Lindhom
 ---
 
 <div class="home">
-    <h2></h2>
-    <ul class="posts">
-
-    </ul>
+    <h2>Rants</h2>
+        <ul class="posts">
+            {% for post in site.posts %}
+            <li>
+                <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+                {{ post.excerpt }}
+            </li>
+            {% endfor %}
+        </ul>
 </div>

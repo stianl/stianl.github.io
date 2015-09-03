@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Comparing DNS providers performance
+comments: true
 ---
 
 An interesting topic came up at work today regarding the performance and security features of DNS servers. A colleague of mine pointed me to an interesting [new service](http://www.mnemonic.no/en/Blog/Free-and-secure-public-DNS-service/) launched by Norwegian Internet security firm [Mnemonic](http://www.mnemonic.no). The service is a type of free and secure DNS service that protects users from malicious sites by resolving addresses to them to their "sinkhole" site (a web server with a blocking page). Sounds like a good idea, especially for users who needs that kind of protection agains themselves (e.g. your average Internet citizen).
